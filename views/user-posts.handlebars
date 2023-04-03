@@ -1,0 +1,22 @@
+{{#each allPosts}}
+<section class="user-posts post">
+  <div class="post-details">
+    <div class="post-header">
+      <a href="/post/{{id}}">
+        <h3 post-id="{{id}}">{{title}}</h3>
+        <p>{{ format_date createdAt}} {{format_time createdAt}}</p>
+      </a>
+    </div>
+    <div class="post-body">
+      <p>{{post_text}}</p>
+      <div class="username-section">
+        <p class="post-username">- {{user.username}}</p>
+        <div>
+          <a class="add-comment-btn"href="/post/{{id}}/add-comment/"><button>ADD COMMENT</button></a>
+          <a class="edit-post-btn" href="/dashboard/update/{{id}}"><button>EDIT POST</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{/each}}

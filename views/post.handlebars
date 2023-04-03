@@ -1,0 +1,43 @@
+<section class="post">
+  <div class="post-details">
+    <div class="post-header">
+      <a href="/post/{{post.id}}">
+        <h3 post-id="{{post.id}}">{{post.title}}</h3>
+        <p>{{format_date post.createdAt}} {{format_time post.createdAt}}</p>
+      </a>
+    </div>
+    <div class="post-body">
+      <p>{{post.post_text}}</p>
+      <div class="username-section">
+        <p class="post-username">- {{post.user.username}}</p>
+        <div>
+          <a class="add-comment-btn" href="/post/{{post.id}}/add-comment/"><button>ADD COMMENT</button></a>
+          {{#if userIdMatch}}
+          <a class="edit-post-btn" href="/dashboard/update/{{post.id}}"><button>EDIT POST</button></a>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{#each post.comments}}
+<div class="comment-box">
+  <div class="comment-details">
+    <div class="comment-header">
+      <a>
+        <h4 comment-id="{{id}}">{{title}}</h4>
+        <p>{{format_date createdAt}} {{format_time createdAt}}</p>
+      </a>
+    </div>
+    <div class="comment-body">
+      <p>{{comment_text}}</p>
+      <div class="username-section">
+        <p class="comment-username">- {{user.username}}</p>
+        {{#if commentUserIdMatch}}
+        <a class="edit-comment-btn" href="/dashboard/update-comment/{{id}}"><button>EDIT COMMENT</button></a>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}

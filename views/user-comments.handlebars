@@ -1,0 +1,24 @@
+{{#each allComments}}
+<div class="post post-fix">
+  <div class="post-details">
+    <h3 class="post-header" post-id="{{post.id}}"><a href="/post/{{post.id}}">{{post.title}}</a></h3>
+  </div>
+</div>
+<section class="user-comments comment-box">
+  <div class="comment-details comment-fix">
+    <div class="comment-header">
+      <a>
+        <h4 comment-id="{{id}}">{{title}}</h4>
+        <p>{{ format_date createdAt}} {{format_time createdAt}}</p>
+      </a>
+    </div>
+    <div class="comment-body">
+      <p>{{comment_text}}</p>
+      <div class="username-section">
+        <p>- {{user.username}}</p>
+        <a class="edit-comment-btn" href="/dashboard/update-comment/{{id}}"><button>EDIT COMMENT</button></a>
+      </div>
+    </div>
+  </div>
+</section>
+{{/each}}

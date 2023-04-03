@@ -1,0 +1,23 @@
+{{#if userIdMatch}}
+<section class="login-card update-post">
+  <form id="update-post-form" post-id="{{post.id}}" user-id="{{post.user_id}}">
+    <div class="form-line">
+      <label for="post-title-input" class="form-category">Title:</label>
+      <input class="form-input" type="text" id="post-title-input" placeholder="title" value="{{post.title}}" />
+    </div>
+    <div class="form-line">
+      <label for="post-text-input" class="form-category">Comment:</label>
+      <textarea class="form-input form-input-content" type="text" id="post-text-input" placeholder="content">{{post.post_text}}</textarea>
+    </div>
+    <div class="form-line form-line-btn">
+      <button class="form-btn" id="update-submit-btn">SUMIT</button>
+    </div>
+  </form>
+  <div class="form-line form-line-btn">
+    <button class="form-btn" id="delete-post-btn">DELETE</button>
+  </div>
+</section>
+<script src="../../js/update-post.js"></script>
+{{else}}
+<h4>You are not the author of this post</h4>
+{{/if}}s

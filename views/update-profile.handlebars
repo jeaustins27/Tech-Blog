@@ -1,0 +1,37 @@
+<section class="login-card update-profile">
+  <h2 class="page-title">Update Your Profile</h2>
+  <form id="update-profile-form">
+    <div class="form-line">
+      <label for="username-input" class="form-category">Username:</label>
+      <input class="form-input" type="text" id="username-input" placeholder="your username" value="{{user.username}}" />
+    </div>
+    <div class="form-line">
+      <label for="email-input" class="form-category">Email:</label>
+      <input class="form-input" type="text" id="email-input" placeholder="your password" value="{{user.email}}" />
+    </div>
+    <div id="password-check-fields">
+      <div class="form-line">
+        <label for="new-password-input" class="form-category">New Password:</label>
+        <input class="form-input" type="password" id="new-password-input" placeholder="your new password" />
+      </div>
+      <div class="form-line">
+        <label for="password-input" class="form-category">New Password:</label>
+        <input class="form-input" type="password" id="password-input" placeholder="your new password" />
+      </div>
+    </div>
+    <div class="form-line hidden center" id="message-box">
+      <div id="password-match-message"></div>
+    </div>
+    <div class="form-line">
+      <label for="old-password-input" class="form-category">Old Password:</label>
+      <input class="form-input" type="password" id="old-password-input" placeholder="your password" />
+    </div>
+    <div class="form-btn-box form-line form-line-btn">
+      <button class="form-btn" id="update-profile-submit-btn">SUBMIT</button>
+    </div>
+  </form>
+  <div class="form-btn-box form-line-btn">
+    <button class="form-btn" id="delete-profile-btn">DELETE</button>
+  </div>
+</section>
+<script src="../../js/update-profile.js"></script>

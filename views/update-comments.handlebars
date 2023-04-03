@@ -1,0 +1,23 @@
+{{#if userIdMatch}}
+<section class="login-card update-post">
+  <form id="update-comment-form" post-id="{{comment.post_id}}" user-id="{{comment.user_id}}" comment-id="{{comment.id}}">
+    <div class="form-line">
+      <label for="comment-title-input" class="form-category">Title:</label>
+      <input class="form-input" type="text" id="comment-title-input" placeholder="title" value="{{comment.title}}" />
+    </div>
+    <div class="form-line">
+      <label for="comment-text-input" class="form-category">Comment:</label>
+      <textarea class="form-input form-input-content" type="text" id="comment-text-input" placeholder="content">{{comment.comment_text}}</textarea>
+    </div>
+    <div class="form-line form-line-btn">
+      <button class="form-btn" id="update-submit-btn">SUBMIT</button>
+    </div>
+  </form>
+  <div class="form-line form-line-btn">
+    <button class="form-btn" id="delete-comment-btn">DELETE</button>
+  </div>
+</section>
+<script src="../../js/update-comment.js"></script>
+{{else}}
+<h4>You are not the author of this comment</h4>
+{{/if}}
