@@ -15,7 +15,7 @@ This project is a CMS-style blog site similar to a Wordpress site, where develop
   * [Questions](#questions)
 
   ## Links
-  * [Deployed Application]()
+  * [Deployed Application](https://sleepy-bayou-31524.herokuapp.com/)
   * [GitHub Repo](https://github.com/jeaustins27/Social-Network-API)
 
   ## Usage
